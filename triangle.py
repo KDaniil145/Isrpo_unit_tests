@@ -12,7 +12,11 @@ def area(a, h):
     Пример использования:
         area(10, 5) -> 25
     '''
-    return a * h / 2
+    if (a >= 0 and h >= 0):
+        return a * h / 2
+    else:
+        raise ValueError("Sides must be >= 0")
+    
 def perimeter(a, b, c):
     '''
     Вычисляет периметр прямоугольника
@@ -29,4 +33,7 @@ def perimeter(a, b, c):
     Пример использования:
         area(10, 5, 1) -> 16
     '''
-    return a + b + c
+    if (a >= 0 and b >= 0 and c >= 0):
+        return a + b + c
+    else:
+        raise ValueError("Sides must be >= 0")

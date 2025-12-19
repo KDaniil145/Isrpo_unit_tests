@@ -13,7 +13,10 @@ def area(r):
     Пример использования:
         area(10) -> 314.1592653589793
     '''
-    return math.pi * r * r
+    if (r >= 0):
+        return math.pi * r * r
+    else:
+        raise ValueError("Radius must be >= 0")
 
 
 def perimeter(r):
@@ -28,4 +31,7 @@ def perimeter(r):
     Пример использования:
         perimetr(10) -> 62.83185307179586
     '''
-    return 2 * math.pi * r
+    if (r >= 0):
+        return 2 * math.pi * r
+    else:
+        raise ValueError("Radius must be >= 0")

@@ -11,7 +11,10 @@ def area(a):
     Пример использования:
         area(10) -> 100
     '''
-    return a * a
+    if (a >= 0):
+        return a * a
+    else:
+        raise ValueError("Sides must be >= 0")
 
 
 def perimeter(a):
@@ -26,4 +29,7 @@ def perimeter(a):
     Пример использования:
         perimetr(10) -> 40
     '''
-    return 4 * a
+    if (a >= 0):
+        return 4 * a
+    else:
+        raise ValueError("Sides must be >= 0")
